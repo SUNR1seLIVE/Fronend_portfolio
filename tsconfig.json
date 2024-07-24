@@ -1,21 +1,26 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "allowJs": true,
+    "outDir": "./dist",
+    "strictPropertyInitialization": false,
+    "target": "esnext",
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
-    "importHelpers": true,
     "moduleResolution": "node",
     "skipLibCheck": true,
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "useDefineForClassFields": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "baseUrl": ".",
     "types": [
       "webpack-env",
-      "jest"
+      "mocha",
+      "jest",
+      "chai"
     ],
     "paths": {
       "@/*": [
@@ -30,6 +35,7 @@
     ]
   },
   "include": [
+    "src/**/*.js",
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
